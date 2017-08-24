@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import router from './router'
 import ElementUI from 'element-ui'    // 引入element-ui
-// import animate from './animate.css'
+import 'animate.css'
 import 'element-ui/lib/theme-default/index.css'
 import App from './App'
 import store from './store/index.js'

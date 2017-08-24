@@ -2,9 +2,14 @@
   <div class="login-style">
     <login-header></login-header>
 
-    <component :is="loginType">
-      <phone-login></phone-login>
-    </component>
+    <transition mode="out-in" enter-active-class="animated fadeInLeft" leave-active-class="animated fadeOutRight">
+      <keep-alive>
+        <component :is="loginType">
+          <phone-login></phone-login>
+        </component>
+      </keep-alive>
+    </transition>
+
   </div>
 </template>
 
