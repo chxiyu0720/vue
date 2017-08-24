@@ -3,21 +3,31 @@
     <el-row>
       <el-col :span="6"><div @click="$router.go(-1)" class="btn_back el-icon-arrow-left"></div></el-col>
       <el-col :span="12"><div class="title">登录</div></el-col>
-      <el-col :span="6"><div @click="changeLoginType()" class="header">密码登陆</div></el-col>
+      <el-col :span="6">
+        <div v-show="type == 'phone-login'" @click="changeLoginType" class="header">手机登陆</div>
+        <div v-show="type == 'password-login'" @click="changeLoginType" class="header">密码登陆</div>
+      </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
+  import {mapActions} from 'vuex'
+
   export default{
       name: 'loginHeader',
       data: function () {
           return {};
       },
-      methods: {
-          changeLoginType: function () {
-              alert(123)
+      computed: {
+          type: function(){
+            return this.$store.state.login.loginType
           }
+      },
+      methods: {
+        ...mapActions([
+            'changeLoginType'
+        ])
       }
   }
 </script>

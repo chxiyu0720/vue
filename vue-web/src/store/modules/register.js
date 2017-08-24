@@ -3,7 +3,7 @@
  * Q Q: 1524904743
  */
 
-import type from './type.js'
+import type from '../type.js'
 import axios from 'axios'
 
 const state= {

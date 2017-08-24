@@ -3,8 +3,11 @@
 import Vue from 'vue'
 import router from './router'
 import ElementUI from 'element-ui'    // 引入element-ui
+// import animate from './animate.css'
 import 'element-ui/lib/theme-default/index.css'
 import App from './App'
+import store from './store/index.js'
+
 
 Vue.use(ElementUI)  // 全局注册element-ui
 Vue.config.productionTip = false
@@ -13,6 +16,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',   // 使用注册的组件app
   components: { App }   // 注册的组件app
 })
