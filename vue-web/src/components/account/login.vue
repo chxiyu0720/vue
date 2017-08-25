@@ -2,7 +2,7 @@
   <div class="login-style">
     <login-header></login-header>
 
-    <transition mode="out-in" enter-active-class="animated fadeInLeft" leave-active-class="animated fadeOutRight">
+    <transition mode="out-in" enter-active-class="animated fadeInUp" leave-active-class="animated fadeOutRight">
       <keep-alive>
         <component :is="loginType">
           <phone-login></phone-login>
@@ -45,5 +45,6 @@
   .login-style{
     height: 100%;
     background: #E5E9F2;
+    overflow: hidden;
   }
 </style>

@@ -7,6 +7,9 @@
   margin-top: 1rem;
 }
 
+.pb-margin-t5{
+  margin-top: 5px;
+}
 .pb-padding-lr10{
   padding: 0 0.5rem;
 }
@@ -22,6 +25,28 @@
   float: left;
 }
 
+/*
+* 定位
+*/
+.pb-position{
+  position: relative;
+}
+.pb-position-ab{
+  position: absolute;
+}
+.pb-top-10{
+  top: 10px;
+}
+.pb-left-10{
+  left: 10px;
+}
+
+/*
+* 宽高
+*/
+.pb-height-2{
+  height: 2rem;
+}
 /*
 * 清除a标签默认样式
 */
