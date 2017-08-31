@@ -6,7 +6,7 @@ import index from '@/components/index/index'
 
 Vue.use(Router)
 
-export default new Router({
+var vueRouter= new Router({
   routes: [
     {
       path: '/',
@@ -25,3 +25,5 @@ export default new Router({
     }
   ]
 })
+
+export default vueRouter;

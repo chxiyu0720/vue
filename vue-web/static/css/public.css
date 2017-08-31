@@ -24,7 +24,9 @@
 .pb-float-left{
   float: left;
 }
-
+.pb-clear{
+  clear: both;
+}
 /*
 * 定位
 */
@@ -33,6 +35,9 @@
 }
 .pb-position-ab{
   position: absolute;
+}
+.pb-flex{
+  display: flex;
 }
 .pb-top-10{
   top: 10px;
@@ -47,6 +52,18 @@
 .pb-height-2{
   height: 2rem;
 }
+.pb-flex-1{
+  flex: 1;
+}
+
+
+/*
+*文字对齐方式
+*/
+.pb-text-center{
+  text-align: center;
+}
+
 /*
 * 清除a标签默认样式
 */

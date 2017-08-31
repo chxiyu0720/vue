@@ -38,7 +38,47 @@
       </el-row>
     </div>
     <div class="index-main">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div v-for="x in 2" class="swiper-slide">
+            <table>
+              <tr v-for="y in 2">
+                <td v-for="z in 4">
+                  <figure>
+                    <img src="https://fuss10.elemecdn.com/2/35/696aa5cf9820adada9b11a3d14bf5jpeg.jpeg" alt="">
+                    <figcaption>冰激凌</figcaption>
+                  </figure>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="grade">
+        <div class="grade-title">
+          <span class="pb-float-left">品质优选</span>
+          <span class="pb-float-right">
+            <router-link to="more">更多</router-link>
+          </span>
+        </div>
+        <div class="pb-flex pb-text-center">
+          <div class="pb-flex-1" v-for="w in 4">
+            <figure>
+              <img src="https://fuss10.elemecdn.com/2/35/696aa5cf9820adada9b11a3d14bf5jpeg.jpeg" alt="">
+              <figcaption>冰激凌</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="nearby-seller">
+        <div class="nearby-title">
+          
+        </div>
+        <div class="nearby-seller-info">
 
+        </div>
+      </div>
     </div>
     <div class="index-footer">
       <el-row>
@@ -80,6 +120,13 @@
         goLogin: function () {
           this.$router.push('/login');
         }
+      },
+      mounted: function () {
+          console.log(111111)
+          new Swiper('.swiper-container', {
+              pagination: '.swiper-pagination',
+              loop: true
+          })
       }
   }
 </script>
@@ -157,6 +204,37 @@
   }
   .index-main{
     height: calc(100% - 13rem);
+    background: #F1F1F1;
+    overflow-y: auto;
+  }
+  table{
+    width: 100%;
+    background: #fff;
+  }
+  table>tr>td{
+    text-align: center;
+  }
+  figure{
+    margin: 0;
+  }
+  figure>img{
+    width: 4rem;
+
+  }
+  .grade{
+    margin-top: 1rem;
+    background: #fff;
+    height: 8rem;
+  }
+  .grade-title{
+    padding: 0.5rem 1rem 0;
+    zoom: 1;
+  }
+  .grade-title:after{
+    clear: both;
+    content: '';
+    display: block;
+    visibility:hidden;
   }
   .index-footer{
     width: 100%;

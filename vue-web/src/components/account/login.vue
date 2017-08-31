@@ -2,10 +2,9 @@
   <div class="login-style">
     <login-header></login-header>
 
-    <transition mode="out-in" enter-active-class="animated fadeInUp" leave-active-class="animated fadeOutRight">
+    <transition mode="out-in" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
       <keep-alive>
-        <component :is="loginType">
-          <phone-login></phone-login>
+        <component :is="loginType" class="router-class">
         </component>
       </keep-alive>
     </transition>
@@ -36,7 +35,16 @@
         passwordLogin
       },
       created: function () {
-        console.log(this);
+//        console.log(this);
+      },
+      watch: {
+//          loginType: function (n, o) {
+//            if(n == 'password-login'){
+//                this.transitionName= 'left';
+//            }else {
+//                this.transitionName= 'right';
+//            }
+//          }
       }
   }
 </script>
@@ -45,6 +53,5 @@
   .login-style{
     height: 100%;
     background: #E5E9F2;
-    overflow: hidden;
   }
 </style>

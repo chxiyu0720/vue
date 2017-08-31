@@ -31,7 +31,7 @@
 </script>
 <style scoped>
   .password-login{
-    margin-top: 20px;
+    margin-top: 2rem;
   }
   p.pb-padding-lr10{
     color: #324057;

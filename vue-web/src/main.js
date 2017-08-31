@@ -7,7 +7,8 @@ import 'animate.css'
 import 'element-ui/lib/theme-default/index.css'
 import App from './App'
 import store from './store/index.js'
-
+import 'swiper'
+import 'swiper/dist/css/swiper.css'
 
 Vue.use(ElementUI)  // 全局注册element-ui
 Vue.config.productionTip = false
@@ -18,5 +19,5 @@ new Vue({
   router,
   store,
   template: '<App/>',   // 使用注册的组件app
-  components: { App }   // 注册的组件app
+  components: {App}   // 注册的组件app
 })

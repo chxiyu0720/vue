@@ -35,8 +35,8 @@
 <style scoped>
   .header{
     background: #20A0FF;
-    height: 60px;
-    line-height: 60px;
+    height: 6rem;
+    line-height: 6rem;
     font-size: 1.6rem;
     color: #fff;
   }
