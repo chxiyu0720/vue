@@ -56,7 +56,7 @@
         <div class="swiper-pagination"></div>
       </div>
       <div class="grade">
-        <div class="grade-title">
+        <div class="grade-title pb-clear">
           <span class="pb-float-left">品质优选</span>
           <span class="pb-float-right">
             <router-link to="more">更多</router-link>
@@ -73,10 +73,25 @@
       </div>
       <div class="nearby-seller">
         <div class="nearby-title">
-          
+          <span>附近商家</span>
         </div>
         <div class="nearby-seller-info">
-
+          <div class="seller-list" v-for="m in 10">
+            <div class="seller-up pb-clear">
+              <div class="seller-img pb-float-left">
+                <img src="static/images/public/elmlogo.jpeg" alt="" width="100%" height="100%">
+              </div>
+              <div class="seller-info pb-float-right">
+                <div><span class="seller-type">品牌</span><h4>饿了么（百大店）</h4><span class="pb-float-right pb-margin-r10">保</span></div>
+                <div><span class="seller-star">☆☆☆☆☆</span><span class="pb-margin-r10">4.0</span><span>月售2111单</span><span class="pb-float-right pb-margin-r10"><span>准时达</span><span>蜂鸟专送</span></span></div>
+                <div><span class="pb-margin-r5">￥20起送</span>|<span class="pb-margin-l5">配送费￥5</span><span class="pb-float-right pb-margin-r10">2.1km | 33分钟</span></div>
+              </div>
+            </div>
+            <div class="seller-down">
+              <div class="pb-margin-t5"><span class="first-order pb-margin-r5">首</span><span>新用户下单立减50.0元</span><span class="pb-float-right pb-margin-r10">4个活动</span></div>
+              <div class="pb-margin-t5"><span class="full-cut pb-margin-r5">减</span><span>满10减20，满100减99</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -132,6 +147,10 @@
 </script>
 
 <style scoped>
+  h4{
+    margin: 0;
+    display: inline-block;
+  }
   .index {
     width: 100%;
     height: 100%;
@@ -146,7 +165,6 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#58B7FF,endcolorstr=#20A0FF,gradientType=1);
     -ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#58B7FF,endcolorstr=#20A0FF,gradientType=1);/*IE8*/
   }
-
   .pos-address{
     height: 3rem;
     line-height: 3rem;
@@ -228,13 +246,62 @@
   }
   .grade-title{
     padding: 0.5rem 1rem 0;
-    zoom: 1;
   }
-  .grade-title:after{
-    clear: both;
-    content: '';
-    display: block;
-    visibility:hidden;
+  .nearby-seller{
+    margin-top: 1rem;
+    background: #fff;
+  }
+  .nearby-title{
+    padding-left: 1rem;
+  }
+  .seller-list{
+    height: 8rem;
+    border-bottom: 1px solid #ccc;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+  }
+  .seller-up{
+    height: 4rem;
+  }
+  .seller-img{
+    width: 4rem;
+    height: 100%;
+    display: inline-block;
+  }
+  .seller-info{
+    width: calc(100% - 4.5rem);
+    height: 100%;
+    display: inline-block;
+    padding-left: 0.5rem;
+  }
+  .seller-type{
+    display: inline-block;
+    background: #e0c429;
+    color: #591809;
+    padding: 1px;
+    margin-right: 0.5rem;
+    font-size: 0.5rem;
+  }
+  .seller-star{
+    color: #e0c429;
+    margin-right: 5px;
+  }
+  .seller-down{
+    width: calc(100% - 4.5rem);
+    height: 4rem;
+    padding-left: 4.5rem;
+  }
+  .first-order{
+    display: inline-block;
+    background: #11c90f;
+    color: #fff;
+    padding: 1px 2px;
+  }
+  .full-cut{
+    display: inline-block;
+    background: red;
+    color: #fff;
+    padding: 1px 2px;
   }
   .index-footer{
     width: 100%;

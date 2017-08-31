@@ -4,17 +4,27 @@
 */
 
 .pb-margin-t10{
-  margin-top: 1rem;
+  margin-top: 10px;
 }
 
 .pb-margin-t5{
   margin-top: 5px;
 }
 .pb-padding-lr10{
-  padding: 0 0.5rem;
+  padding: 0 10px;
 }
-
-
+.pb-margin-l10{
+  margin-left: 10px;
+}
+.pb-margin-r10{
+  margin-right: 10px;
+}
+.pb-margin-r5{
+  margin-right: 5px;
+}
+.pb-margin-l5{
+  margin-left: 5px;
+}
 /*
 * 布局浮动
 */
@@ -25,7 +35,13 @@
   float: left;
 }
 .pb-clear{
+  zoom: 1;
+}
+.pb-clear:after{
   clear: both;
+  content: '';
+  display: block;
+  visibility:hidden;
 }
 /*
 * 定位
